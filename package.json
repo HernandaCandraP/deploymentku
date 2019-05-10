@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy:gh": "ng build --prod --base-href='https://hernandacandrap.github.io/Deployment_Angular/' && ngh" 
+    "deploy:gh": "ng build --prod --base-href='https://hernandacandrap.github.io/Deployment_Angular/' && ngh",
+    "postinstall": "ng build --output-path deploymentku --aou --prod"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +25,8 @@
     "@angular/router": "^4.0.0",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
+    "express": "^4.16.4",
+    "path": "^0.12.7",
     "rxjs": "^5.4.1",
     "zone.js": "^0.8.14"
   },
@@ -47,5 +50,9 @@
     "ts-node": "~3.0.4",
     "tslint": "~5.3.2",
     "typescript": "~2.3.3"
+  },
+  "engines": {
+    "node": "v10.15.1",
+    "npm": "6.4.1"
   }
 }
